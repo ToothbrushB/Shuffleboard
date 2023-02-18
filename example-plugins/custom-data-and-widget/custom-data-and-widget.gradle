@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     compileOnly project(":api")
+    compileOnly project(":plugins:base")
 }
 
 tasks.register("installPlugin", Copy) {
