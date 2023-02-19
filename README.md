@@ -1,4 +1,6 @@
 ![CI](https://github.com/wpilibsuite/shuffleboard/workflows/CI/badge.svg)
+# Plugin info
+The plugin is located in example-plugins. The rest of this repo is just Shuffleboard.
 
 # Shuffleboard
 
