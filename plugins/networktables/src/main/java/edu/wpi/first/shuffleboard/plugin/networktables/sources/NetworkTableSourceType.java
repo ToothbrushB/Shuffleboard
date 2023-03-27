@@ -49,6 +49,7 @@ public final class NetworkTableSourceType extends SourceType {
           availableSources.clear();
           availableSourceIds.clear();
           NetworkTableSource.removeAllCachedSources();
+          Sources.getDefault().forType(NetworkTableSourceType.instance).forEach(Sources.getDefault()::unregister);
         });
       } else if (event.is(NetworkTableEvent.Kind.kConnected)) {
         FxUtils.runOnFxThread(() -> {
@@ -127,6 +128,9 @@ public final class NetworkTableSourceType extends SourceType {
     final String fullKey = removeProtocol(recordedData.getSourceId());
     NetworkTableEntry entry = NetworkTableInstance.getDefault().getEntry(fullKey);
     entry.setValue(recordedData.getData());
+    if (!entry.getTopic().isRetained()) {
+      entry.getTopic().setRetained(true);
+    }
   }
 
   @Override
