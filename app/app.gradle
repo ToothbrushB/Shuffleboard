@@ -38,7 +38,7 @@ dependencies {
 
     implementation project(':api')
     implementation project(':plugins:base')
-    implementation project(':plugins:cameraserver')
+//    implementation project(':plugins:cameraserver')
     implementation project(':plugins:networktables')
 
     api group: "de.huxhorn.lilith", name: "de.huxhorn.lilith.3rdparty.junique", version: "1.0.4"
