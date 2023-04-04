@@ -1,6 +1,7 @@
 package com.calebli.shuffleboardplugin;
 
 import com.calebli.shuffleboardplugin.widget.BigSplitButtonChooserWidget;
+import com.calebli.shuffleboardplugin.widget.BigTextViewWidget;
 import com.calebli.shuffleboardplugin.widget.GridChooserWidget;
 import edu.wpi.first.shuffleboard.api.plugin.Description;
 import edu.wpi.first.shuffleboard.api.plugin.Plugin;
@@ -25,7 +26,8 @@ public final class GridChooserPlugin extends Plugin {
   public List<ComponentType> getComponents() {
     return List.of(
                 WidgetType.forAnnotatedWidget(GridChooserWidget.class),
-                WidgetType.forAnnotatedWidget(BigSplitButtonChooserWidget.class)
+                WidgetType.forAnnotatedWidget(BigSplitButtonChooserWidget.class),
+                WidgetType.forAnnotatedWidget(BigTextViewWidget.class)
         );
     }
 }
