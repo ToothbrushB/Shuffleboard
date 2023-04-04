@@ -80,8 +80,8 @@ public class Shuffleboard extends Application {
 
     notifyPreloader(new ShuffleboardPreloader.StateNotification("Loading NetworkTables plugin", 0.25));
     PluginLoader.getDefault().load(new NetworkTablesPlugin());
-//    notifyPreloader(new ShuffleboardPreloader.StateNotification("Loading CameraServer plugin", 0.375));
-//    PluginLoader.getDefault().load(new CameraServerPlugin());
+    //    notifyPreloader(new ShuffleboardPreloader.StateNotification("Loading CameraServer plugin", 0.375));
+    //    PluginLoader.getDefault().load(new CameraServerPlugin());
     notifyPreloader(new ShuffleboardPreloader.StateNotification("Loading custom plugins", 0.625));
     PluginLoader.getDefault().loadAllJarsFromDir(Storage.getPluginPath());
     notifyPreloader(new ShuffleboardPreloader.StateNotification("Loading custom plugins", 0.75));
